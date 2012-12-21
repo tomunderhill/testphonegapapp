@@ -31,10 +31,11 @@
 
       <script type="text/javascript">
 
-
-        document.addEventListener("deviceready",onDeviceReady,false);
-        document.addEventListener("backbutton",onBackButton,false);
-
+          function onLoad() {
+              document.addEventListener("deviceready", onDeviceReady, false);
+              document.addEventListener("backbutton", onBackButton, false);
+          }
+       
         // once the device ready event fires, you can safely do your thing! -jm
         function onDeviceReady()
         {
@@ -68,7 +69,7 @@
 
 
   </head>
-  <body>
+  <body onload="onLoad()">
     <h1>Device information</h1>
     <div id="info">
       <h4>
